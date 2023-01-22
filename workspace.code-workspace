@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "..\\..\\..\\Downloads\\intl-tel-input-17.0.0\\intl-tel-input-17.0.0\\build"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "form-fiver"
+  }
+}

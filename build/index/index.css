@@ -1,0 +1,28 @@
+.navBar {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(17, 85, 124);
+  padding: 20px 0 20px 0;
+}
+
+.navLink {
+  margin: 3px 5px 0 5px;
+  padding: 5px;
+}
+
+* {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+button {
+  color: #fff;
+  background-color: #428bca;
+  border: 1px solid #357ebd;
+}
+button:hover {
+  background-color: #3276b1;
+  border-color: #285e8e;
+  cursor: pointer;
+}
