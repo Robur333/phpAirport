@@ -21,9 +21,13 @@
         <div class="navLinks">
           <button class="navLink"><a href="/Login">Login</a></button>
           <button class="navLink"><a href="/register">Sign up</a></button>
-          <button class="navLink"><a href="/profile">Profile</a></button>
           <?php 
           session_start();
+          if(isset($_SESSION['user'])) {
+                   echo  '<button class="navLink"><a href="/profile">Profile</a></button>';
+
+          }; ?>
+          <?php 
           if(isset($_SESSION['user'])) {
                    echo  '<button class="navLink"><a href="/logout">Logout</a></button>';
 
