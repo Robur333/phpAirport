@@ -19,15 +19,20 @@
       <nav class="navBar">
         <div>Cheap Flights Today!</div>
         <div class="navLinks">
-          <button class="navLink"><a href="/Login">Login</a></button>
-          <button class="navLink"><a href="/register">Sign up</a></button>
-          <button class="navLink"><a href="/profile">Profile</a></button>
+ 
+         
           <?php 
           session_start();
+          $_SESSION['errorMessage'] = '';
           if(isset($_SESSION['user'])) {
-                   echo  '<button class="navLink"><a href="/logout">Logout</a></button>';
+                   echo  '         <a class="navLink" href="/logout">Logout  <button class="navLink">  </button></a>
+                   ';
+                   echo '<a class="navLink" href="/profile">Profile  <button class="navLink">  </button></a>';
 
-          }; ?>
+          } else {
+         echo'   <a class="navLink" href="/Login">Login  <button class="navLink">  </button></a>';
+            echo ' <a class="navLink" href="/register">Sign up   <button class="navLink">  </button></a> ';
+          } ?>
         </div>
       </nav>
       <div class="flightBoard">

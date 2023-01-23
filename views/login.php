@@ -35,6 +35,16 @@ $connect = new mysqli(
       $_SESSION["errorMessage"] = "Invalid login or password";
 
     }
+
+    while($row = $resultLogin->fetch_assoc()) {
+      echo 123;
+      if($row['password'] != $passwordQuery) {
+        $_SESSION['password'] = $loginQuery;
+        $_SESSION["errorMessage"] = "Invalid login or password";
+
+        header("Location: /Login");
+ }
+}
  
 
 
@@ -47,10 +57,7 @@ $connect = new mysqli(
         $_SESSION["errorMessage"] = "";
 
         header("Location: /");
- } else {
-  echo 123;
-    $_SESSION["errorMessage"] = "Invalid login or password";
-    }
+ } 
     }
   } 
     
@@ -79,7 +86,6 @@ $connect = new mysqli(
       <h1>Login</h1>
       <Form class="card" method="POST" action="">
         <?php 
-        echo $_SESSION['errorMessage'];
         if ( ! empty($_SESSION['errorMessage'])){
         echo '<p> Wrong login or password</p>';
         }else{
