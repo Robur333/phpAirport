@@ -84,6 +84,7 @@
     echo $row["phoneNumber"];
         }
     }
+    $conn->close();
     ?>
     </main>
 
