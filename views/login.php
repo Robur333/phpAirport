@@ -87,7 +87,7 @@ $connect = new mysqli(
       <Form class="card" method="POST" action="">
         <?php 
         if ( ! empty($_SESSION['errorMessage'])){
-        echo '<p> Wrong login or password</p>';
+        echo '<p class="error-message">Wrong login or password</p>';
         }else{
             $isPasswordCorrect = true;;
 

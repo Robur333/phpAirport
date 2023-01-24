@@ -25,7 +25,7 @@
           if(isset($_SESSION['user'])) {
                    echo  '         <a class="navLink" href="/logout">Logout</a>
                    ';
-                   echo '<a class="navLink" href="/profile">Profile</a>';
+                   echo '<a class="navLink" href="/profile">Profile </a>';
           } else {
          echo'   <a class="navLink" href="/Login">Login</a>';
             echo ' <a class="navLink" href="/register">Sign up</a> ';

@@ -165,4 +165,9 @@ input:focus {
 .grey-btn:hover {
   background-color: #d4d4d4;
 }
+
+.error-message {
+  color: red;
+  text-align: center;
+}
 /*# sourceMappingURL=styles.css.map */
