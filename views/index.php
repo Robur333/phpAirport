@@ -38,21 +38,21 @@
             <div>Flight Details</div>
             <div>
                 <span>65zł</span>
-                <button>Select</button>
+                <button onclick="reserveFlight(this)">Select</button>
             </div>
         </div>
         <div class="flight">
           <div>Flight Details</div>
         <div>
             <span>65zł</span>
-            <button>Select</button>
+            <button onclick="reserveFlight(this)">Select</button>
         </div>
     </div>
     <div class="flight">
           <div>Flight Details</div>
         <div>
             <span>65zł</span>
-            <button>Select</button>
+            <button onclick="reserveFlight(this)">Select</button>
         </div>
 </div>
       </div>
