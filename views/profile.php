@@ -46,12 +46,14 @@
     $password = "";
     $dbname = "phpdb";
     $conn = new mysqli($hostname, $username, $password, $dbname);
+    session_start();
+    $email = $_SESSION['user'];
 
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT name, surname FROM users";
+    $sql = "SELECT name, surname FROM users where email = '$email'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -62,7 +64,7 @@
     ?>
     <h3>Email</h3>
     <?php
-    $sql = "SELECT email FROM users";
+    $sql = "SELECT email FROM users where email = '$email'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -73,7 +75,7 @@
     ?>
     <h3>Phone Number</h3>
     <?php
-    $sql = "SELECT phoneNumber FROM users";
+    $sql = "SELECT phoneNumber FROM users where email = '$email'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {

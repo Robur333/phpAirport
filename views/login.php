@@ -5,15 +5,15 @@ session_start();
         $isPasswordCorrect = true;
      };
 
-     
      if(isset($_POST['login'])){
-         $loginQuery = $_POST['login'];
+    $loginQuery = $_POST['login'];
     $passwordQuery = $_POST['password'];
     $hostname = "127.0.0.1";
     $username = "root";
     $password = "";
     $databasename = "phpdb";
     $isPasswordCorrect = false;
+    $email = $_POST['login'];
     
 
 $connect = new mysqli(
@@ -35,21 +35,16 @@ $connect = new mysqli(
       $_SESSION["errorMessage"] = "Invalid login or password";
 
     }
-
     while($row = $resultLogin->fetch_assoc()) {
       echo 123;
       if($row['password'] != $passwordQuery) {
         $_SESSION['password'] = $loginQuery;
         $_SESSION["errorMessage"] = "Invalid login or password";
-
         header("Location: /Login");
+        $_SESSION['user'] = $email;
+        header("Location: /");
  }
 }
- 
-
-
-
-    // output data of each row
     while($row = $resultPassword->fetch_assoc()) {
       echo 123;
       if($row['password'] == $passwordQuery) {
