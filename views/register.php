@@ -1,3 +1,32 @@
+<?php
+ if(isset($_POST['login'])){
+
+$loginQuery = $_POST['login'];
+$passwordQuery = $_POST['password'];
+$nameQuery = $_POST['name'];
+$surNameQuery = $_POST['surname'];
+$phoneQuery = $_POST['phoneNumber'];
+$hostname = "127.0.0.1";
+$username = "root";
+$password = "";
+$databasename = "phpdb";
+
+echo $surNameQuery;
+echo $phoneQuery;
+$connect = new mysqli(
+    $hostname,
+    $username,
+    $password,
+    $databasename
+  );
+
+  $queryDoZapisuDanych = "INSERT INTO users (email,password,name,surname,phoneNumber) VALUES ('" . $loginQuery . "','" . $passwordQuery . "','" . $nameQuery . "','" . $surNameQuery . "','" . $phoneQuery . "')";
+  $result = $connect->query($queryDoZapisuDanych);
+    echo $result;
+
+  header("Location: /");
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +48,7 @@
   <body>
     <main class="container">
       <h1>Sign Up Form</h1>
-      <Form class="card" method="POST" action="/views/registered.php">
+      <Form class="card" method="POST" action="/views/register.php">
         <div class="form-step">
           <div class="step-title">
 
@@ -83,8 +112,6 @@
         </div>
       </Form>
     </main>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="./build/js/intlTelInput.min.js"></script>
     <script src="./build/register/register.js"></script>
 
   </body>
