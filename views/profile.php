@@ -46,16 +46,17 @@
     $password = "";
     $dbname = "phpdb";
     $conn = new mysqli($hostname, $username, $password, $dbname);
+    session_start();
+    $email = $_SESSION['user'];
 
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT name, surname FROM users";
+    $sql = "SELECT name, surname FROM users where email = '$email'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-    // output data of each row
         while($row = $result->fetch_assoc()) {
     echo $row["name"], " ", $row["surname"];
         }
@@ -63,11 +64,10 @@
     ?>
     <h3>Email</h3>
     <?php
-    $sql = "SELECT email FROM users";
+    $sql = "SELECT email FROM users where email = '$email'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-    // output data of each row
         while($row = $result->fetch_assoc()) {
     echo $row["email"];
         }
@@ -75,17 +75,19 @@
     ?>
     <h3>Phone Number</h3>
     <?php
-    $sql = "SELECT phoneNumber FROM users";
+    $sql = "SELECT phoneNumber FROM users where email = '$email'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-    // output data of each row
         while($row = $result->fetch_assoc()) {
     echo $row["phoneNumber"];
         }
     }
     $conn->close();
     ?>
+    <div class="body">
+        <button id="back-3" class="grey-btn-center"><a href="/">Return</a></button>
+    </div>
     </main>
 
     <footer>
