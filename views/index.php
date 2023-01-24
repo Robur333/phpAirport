@@ -18,17 +18,17 @@
     <div class="container">
       <nav class="navBar">
         <div>Cheap Flights Today!</div>
-        <div class="navLinks">
+        <div>
           <?php 
           session_start();
           $_SESSION['errorMessage'] = '';
           if(isset($_SESSION['user'])) {
-                   echo  '         <a class="navLink" href="/logout">Logout  <button class="navLink">  </button></a>
+                   echo  '         <a class="navLink" href="/logout">Logout</a>
                    ';
-                   echo '<a class="navLink" href="/profile">Profile  <button class="navLink">  </button></a>';
+                   echo '<a class="navLink" href="/profile">Profile</a>';
           } else {
-         echo'   <a class="navLink" href="/Login">Login  <button class="navLink">  </button></a>';
-            echo ' <a class="navLink" href="/register">Sign up   <button class="navLink">  </button></a> ';
+         echo'   <a class="navLink" href="/Login">Login</a>';
+            echo ' <a class="navLink" href="/register">Sign up</a> ';
           } ?>
         </div>
       </nav>
