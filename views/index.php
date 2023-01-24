@@ -35,26 +35,25 @@
       <div class="flightBoard">
         <h2>Dostępne Loty</h2>
         <div class="flight">
-            <div>Flight Detail</div>
-
+            <div>Flight Details</div>
             <div>
                 <span>65zł</span>
                 <button>Select</button>
             </div>
         </div>
-        <div>Flight Detail</div>
-
+        <div class="flight">
+          <div>Flight Details</div>
         <div>
             <span>65zł</span>
             <button>Select</button>
         </div>
     </div>
-    <div>Flight Detail</div>
-
-    <div>
-        <span>65zł</span>
-        <button>Select</button>
-    </div>
+    <div class="flight">
+          <div>Flight Details</div>
+        <div>
+            <span>65zł</span>
+            <button>Select</button>
+        </div>
 </div>
       </div>
     </div>

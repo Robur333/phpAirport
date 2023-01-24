@@ -90,9 +90,7 @@ $connect = new mysqli(
         echo '<p class="error-message">Wrong login or password</p>';
         }else{
             $isPasswordCorrect = true;;
-
         } 
-
         ?>
         <div class="form-step">
           <div class="step-title">
