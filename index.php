@@ -22,6 +22,9 @@ switch ($request) {
             case '/logout' :
                 require __DIR__ . '/views/logout.php';
                 break;
+                case '/profile':
+                    require __DIR__ . '/views/profile.php';
+                    break;
     default:
         http_response_code(404);
         require __DIR__ . '/views/404.php';
