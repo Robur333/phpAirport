@@ -55,7 +55,6 @@
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-    // output data of each row
         while($row = $result->fetch_assoc()) {
     echo $row["name"], " ", $row["surname"];
         }
@@ -67,7 +66,6 @@
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-    // output data of each row
         while($row = $result->fetch_assoc()) {
     echo $row["email"];
         }
@@ -79,13 +77,15 @@
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-    // output data of each row
         while($row = $result->fetch_assoc()) {
     echo $row["phoneNumber"];
         }
     }
     $conn->close();
     ?>
+    <div class="body">
+        <button id="back-3" class="grey-btn-center"><a href="/">Return</a></button>
+    </div>
     </main>
 
     <footer>

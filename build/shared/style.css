@@ -40,3 +40,21 @@ body {
 .grey-btn:hover {
   background-color: #d4d4d4;
 }
+
+.grey-btn-center {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #343434;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.grey-btn-center:hover {
+  background-color: #d4d4d4;
+}
