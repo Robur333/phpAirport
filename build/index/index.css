@@ -9,18 +9,16 @@
 
 .navLink {
   background-color: rgb(29, 134, 196);
+  color: white;
   padding: 5px 10px;
   text-align: center;
   transition: background-color 0.2s ease-in;
+  border-radius: 15px;
 }
 
 .navLink:hover {
   background-color: rgb(49, 168, 238);
   cursor: pointer;
-}
-
-* {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 button {
@@ -35,3 +33,66 @@ button:hover {
   cursor: pointer;
 }
 
+.flight {
+  background-color: #f5f5f5;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in;
+}
+
+.flight:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
+
+.flightBoard {
+  text-align: center;
+}
+
+.flight div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.flight h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.flight span {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.flight button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.2s ease-in;
+}
+
+.flight button:hover {
+  background-color: #3e8e41;
+  cursor: pointer;
+}
+
+.flight.reserved {
+  background-color: #b9f6ca;
+}
+
+.flight.reserved h3 {
+  text-decoration: line-through;
+}
+
+.flight.reserved button {
+  background-color: #9e9e9e;
+  cursor: not-allowed;
+}

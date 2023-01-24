@@ -41,8 +41,6 @@ $connect = new mysqli(
         $_SESSION['password'] = $loginQuery;
         $_SESSION["errorMessage"] = "Invalid login or password";
         header("Location: /Login");
-        $_SESSION['user'] = $email;
-        header("Location: /");
  }
 }
     while($row = $resultPassword->fetch_assoc()) {
@@ -55,9 +53,6 @@ $connect = new mysqli(
  } 
     }
   } 
-    
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
