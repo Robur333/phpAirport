@@ -13,32 +13,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="/build/index/index.css" />
     <link rel="stylesheet" href="/build/shared/style.css" />
-  </head>
+    <link rel="stylesheet" href="/build/profile/profile.css" />
     <title>Profile</title>
-    <style>
-    header {
-        background-color: blue;
-        color: white;
-        text-align: center;
-    }
-
-    main {
-        padding: 20px;
-    }
-
-    footer {
-        text-align: center;
-    }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>User Profile</h1>
-    </header>
-
+    </head>
+    <body>
+    <div class='container'>
+      <nav class="navBar">
+        <div class='UsProfile'>User Profile</div>
+        </nav>
+        <div>
     <main>
-        <h2>Profile Information</h2>
-
+        <div class='avatar'></div>
+        <h1>Profile Information</h1>
         <h3>Full Name</h3>
         <?php
     $hostname = "127.0.0.1";
@@ -90,6 +76,6 @@
     </div>
     </main>
 
-    <footer>
+    <footer class='footer'>
         <p>Copyright ©2022 Airport</p>
     </footer>
