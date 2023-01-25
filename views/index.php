@@ -32,29 +32,8 @@
           } ?>
         </div>
       </nav>
-      <div class="flightBoard">
-        <h2>Dostępne Loty</h2>
-        <div class="flight">
-            <div>Flight Details</div>
-            <div>
-                <span>65zł</span>
-                <button onclick="reserveFlight(this)">Select</button>
-            </div>
-        </div>
-        <div class="flight">
-          <div>Flight Details</div>
-        <div>
-            <span>65zł</span>
-            <button onclick="reserveFlight(this)">Select</button>
-        </div>
-    </div>
-    <div class="flight">
-          <div>Flight Details</div>
-        <div>
-            <span>65zł</span>
-            <button onclick="reserveFlight(this)">Select</button>
-        </div>
-</div>
+      <div id="flightBoardId" class="flightBoard">
+        <h2>Avaible Flights</h2>
       </div>
     </div>
     <script src="/build/index/index.js"></script>

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
@@ -18,15 +18,15 @@ ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   background-color: #fafafa;
 }
 
@@ -34,7 +34,7 @@ ul {
   margin: 20px;
   border-radius: 0px 0px 2px 2px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.18) 0px 5px 25px 0px;
-          box-shadow: rgba(0, 0, 0, 0.18) 0px 5px 25px 0px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 5px 25px 0px;
   border-radius: 15px;
   width: 350px;
   padding: 20px;
@@ -48,8 +48,8 @@ ul {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   /* The message box is shown when the user clicks on the password field */
   /* Add a green text color and a checkmark when the requirements are right */
   /* Add a red text color and an "x" when the requirements are wrong */
@@ -115,8 +115,8 @@ ul {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   padding: 10px;
 }
 
@@ -150,7 +150,7 @@ input:focus {
 }
 
 .grey-btn {
-  margin: 5px;
+  margin: 5px 0 15px 0;
   padding: 10px;
   border-radius: 15px;
   border: none;
