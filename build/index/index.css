@@ -96,3 +96,25 @@ button:hover {
   background-color: #9e9e9e;
   cursor: not-allowed;
 }
+
+.pop-up {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+.pop-up-buttons {
+  margin: 10px 20px;
+  justify-items: end;
+}
+
+.hidden {
+  display: none;
+}

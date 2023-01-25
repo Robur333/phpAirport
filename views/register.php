@@ -1,4 +1,6 @@
 <?php
+
+
  if(isset($_POST['login'])){
 
 $loginQuery = $_POST['login'];
@@ -11,8 +13,7 @@ $username = "root";
 $password = "";
 $databasename = "phpdb";
 
-echo $surNameQuery;
-echo $phoneQuery;
+
 $connect = new mysqli(
     $hostname,
     $username,
@@ -20,12 +21,22 @@ $connect = new mysqli(
     $databasename
   );
 
-  $queryDoZapisuDanych = "INSERT INTO users (email,password,name,surname,phoneNumber) VALUES ('" . $loginQuery . "','" . $passwordQuery . "','" . $nameQuery . "','" . $surNameQuery . "','" . $phoneQuery . "')";
-  $result = $connect->query($queryDoZapisuDanych);
-    echo $result;
+  $ifUserExists = "SELECT email FROM users WHERE email = '$loginQuery'";
+  $existance = $connect->query($ifUserExists);
+ $num_rows = mysqli_num_rows($existance);
 
-  header("Location: /");
+  if($num_rows == 0) {
+    $queryDoZapisuDanych = "INSERT INTO users (email,password,name,surname,phoneNumber) VALUES ('" . $loginQuery . "','" . $passwordQuery . "','" . $nameQuery . "','" . $surNameQuery . "','" . $phoneQuery . "')";
+    $result = $connect->query($queryDoZapisuDanych);
+    header("Location: /");
+  }
+ while($row = $existance->fetch_assoc()) {
+  if($row['email'] = $loginQuery) {
+    $_SESSION["errorMessage"] = "User already exists";
+  }
 }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +59,12 @@ $connect = new mysqli(
   <body>
     <main class="container">
       <h1>Sign Up Form</h1>
-      <Form class="card" method="POST" action="/views/register.php">
+      <Form class="card" method="POST" action="/register">
+      <?php 
+        if ( ! empty($_SESSION['errorMessage'])){
+        echo '<p class="error-message">User already exists</p>';
+        }
+        ?>
         <div class="form-step">
           <div class="step-title">
 
