@@ -33,7 +33,7 @@
         </div>
       </nav>
       <div id="flightBoardId" class="flightBoard">
-        <h2>Avaible Flights</h2>
+        <h2>Available Flights</h2>
       </div>
     </div>
     <script src="/build/index/index.js"></script>

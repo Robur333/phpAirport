@@ -48,6 +48,9 @@ body {
 .grey-btn-center {
   display: block;
   margin: 0 auto;
+  font-size:1.2em;
+  width:80px;
+  height:40px;
   padding: 10px;
   background-color: #ffffff;
   color: #343434;
