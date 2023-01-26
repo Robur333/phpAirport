@@ -1,4 +1,8 @@
 document.onload(FlightCard());
+function closePopUp() {
+  console.log(document.getElementById('pop-up-id'));
+  document.getElementById('pop-up-id').classList.add('hidden');
+}
 function FlightCard() {
   const data = [
     {
@@ -58,7 +62,11 @@ function FlightCard() {
     button.addEventListener('click', () => reserveFlight(button, element.Id));
   });
   function reserveFlight(button, id) {
-    button.innerHTML = 'Reserved';
-    document.getElementById(id).classList.add('reserved');
+    if (document.getElementById('authenticated') != null) {
+      button.innerHTML = 'Reserved';
+      document.getElementById(id).classList.add('reserved');
+    } else {
+      document.getElementById('pop-up-id').classList.remove('hidden');
+    }
   }
 }

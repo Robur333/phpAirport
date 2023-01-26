@@ -27,10 +27,15 @@ $connect = new mysqli(
  $selectPassword = "SELECT password FROM users where email = '$loginQuery' ";
  // $selectLogin = "SELECT email FROM users where email = '$loginQuery'";
  $selectLogin = "SELECT * FROM users"  ;
+
+ $selectName =  "SELECT name FROM users where email = '$loginQuery' ";
+
  
  $resultPassword = $connect->query($selectPassword);
   $resultLogin = $connect->query($selectLogin);
+  $resulName = $connect->query($selectName);
 
+ 
     if($loginQuery == '' || $passwordQuery == '') {
       $_SESSION["errorMessage"] = "Invalid login or password";
 
@@ -46,6 +51,9 @@ $connect = new mysqli(
     while($row = $resultPassword->fetch_assoc()) {
       echo 123;
       if($row['password'] == $passwordQuery) {
+        while($row = $resulName->fetch_assoc()) {
+          $_SESSION['name'] = $row['name'];
+        }
         $_SESSION['user'] = $loginQuery;
         $_SESSION["errorMessage"] = "";
 
@@ -78,9 +86,7 @@ $connect = new mysqli(
         <?php 
         if ( ! empty($_SESSION['errorMessage'])){
         echo '<p class="error-message">Wrong login or password</p>';
-        }else{
-            $isPasswordCorrect = true;;
-        } 
+        }
         ?>
         <div class="form-step">
           <div class="step-title">

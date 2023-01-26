@@ -15,6 +15,15 @@
     <link rel="stylesheet" href="/build/shared/style.css" />
   </head>
   <body>
+    <div class=" pop-up hidden" id="pop-up-id">
+      <button class="close-tag grey-btn" onclick="closePopUp()">x</button>
+      <p>To reserve a flight please sign up or login first</p>
+      <div class=pop-up-buttons>
+        <a class="navLink" href="/Login">Login</a>
+        <a class="navLink" href="/register">Sign up</a>
+      </div>
+    </div>
+
     <div class="container">
       <nav class="navBar">
         <div>Cheap Flights Today!</div>
@@ -23,10 +32,14 @@
           session_start();
           $_SESSION['errorMessage'] = '';
           if(isset($_SESSION['user'])) {
-                   echo  '         <a class="navLink" href="/logout">Logout</a>
+            $user = $_SESSION['name'];
+            echo "<p> Hi '$user' </p> ";
+                   echo  '         <a class="navLink" id="authenticated" href="/logout">Logout</a>
                    ';
                    echo '<a class="navLink" href="/profile">Profile </a>';
           } else {
+           
+
          echo'   <a class="navLink" href="/Login">Login</a>';
             echo ' <a class="navLink" href="/register">Sign up</a> ';
           } ?>
@@ -37,6 +50,9 @@
       </div>
     </div>
     <script src="/build/index/index.js"></script>
+    <script>
+
+    </script>
   </body>
 </html>
 
