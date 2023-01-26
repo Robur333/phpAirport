@@ -101,13 +101,15 @@ button:hover {
   display: flex;
   flex-direction: column;
   text-align: center;
-  position: absolute;
-  height: 400px;
+  position: fixed;
+  height: 150px;
   width: 400px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
+  border: 2px solid #000000;
+  box-shadow: 2px 4px 8px #000000
 }
 
 .pop-up-buttons {

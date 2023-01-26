@@ -71,7 +71,7 @@ $connect = new mysqli(
             <h3>Email</h3>
           </div>
           <li id="step1" class=" form-imputs ">
-            <input id="mail" name='login' type="text" placeholder="Enter your email" />
+            <input id="mail" name='login' type="text" required placeholder="Enter your email*" />
             
           </li>
         </div>
@@ -81,7 +81,7 @@ $connect = new mysqli(
             <h3>Name</h3>
           </div>
           <div id="step2" class="form-imputs  ">
-            <input name='name' id="name" type="text" placeholder="Enter your name" />
+            <input name='name' id="name" type="text" required placeholder="Enter your name*" />
             <input  name='surname' id="surname" type="text" placeholder="Enter your surname" />
             
           </div>
@@ -98,9 +98,8 @@ $connect = new mysqli(
               name="password"
               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
               title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-              required
-              placeholder="Enter your password"
-            />
+              required placeholder="Enter your password*"
+              />
             <div id="message">
               <h5>Password must contain the following:</h3>
               <p id="letter" class="invalid">A lowercase letter</p>
@@ -119,7 +118,7 @@ $connect = new mysqli(
             <h3>Phone Number</h3>
           </div>
           <div id="step4" class="form-imputs ">
-            <input name="phoneNumber" id="phone" type="tel" />
+            <input name="phoneNumber" id="phone" type="tel" placeholder="Enter your phone number"/>
             <div>
               <button id="back-3" on class="grey-btn"><a href="/">Return</a></button>
               <button id="submit-btn" class="blue-btn">Sign In</button>
