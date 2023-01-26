@@ -16,12 +16,12 @@
   </head>
   <body>
       <div class="pop-up hidden" id="pop-up-id">
-        <button class="close-tag grey-btn" onclick="closePopUp()">Return</button>
         <p>To reserve a flight, please <b>sign up</b> or <b>login</b> first</p>
         <div class=pop-up-buttons>
           <a class="navLink" href="/Login">Login</a>
           <a class="navLink" href="/register">Sign up</a>
         </div>
+        <button class="close-tag grey-btn" onclick="closePopUp()">Return</button>
       </div>
 
     <div class="container">

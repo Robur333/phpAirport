@@ -34,6 +34,7 @@ button:hover {
 }
 
 .flight {
+  width: 70vw;
   background-color: #f5f5f5;
   padding: 10px;
   margin-bottom: 20px;
@@ -48,6 +49,10 @@ button:hover {
 
 .flightBoard {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .flight div {
@@ -109,7 +114,7 @@ button:hover {
   transform: translate(-50%, -50%);
   background-color: white;
   border: 2px solid #000000;
-  box-shadow: 2px 4px 8px #000000
+  box-shadow: 2px 4px 8px #000000;
 }
 
 .pop-up-buttons {
@@ -119,4 +124,8 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+.close-tag {
+  margin: 0 100px !important;
 }
