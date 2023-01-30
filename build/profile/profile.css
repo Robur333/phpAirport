@@ -1,40 +1,51 @@
 .profile-info {
-    padding: 20px;
-    font-style: bold;
+  padding: 20px;
+  font-style: bold;
 }
 
 .full-name {
-    font-weight: bold;
-    color: rgb(0, 0, 0);
+  font-weight: bold;
+  color: rgb(0, 0, 0);
 }
 
 .email {
-    font-style: bold;
-    color: rgb(0, 0, 0);
+  font-style: bold;
+  color: rgb(0, 0, 0);
 }
 
 .phone-number {
-    font-style: bold;
-    color: rgb(0, 0, 0);
+  font-style: bold;
+  color: rgb(0, 0, 0);
 }
 
-.UsProfile{
-    font-size:2em;
+.UsProfile {
+  font-size: 2em;
 }
 
 .avatar {
-    background-image: url('avatar2.jpg');
-    background-size: cover;     
-    vertical-align: middle;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: solid 2px rgb(0, 0, 0);
-    margin-top: 20px;
-    margin-left: 20px;
-}   
-
-.footer{
-    text-align: center;
+  background-image: url('avatar2.jpg');
+  background-size: cover;
+  vertical-align: middle;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: solid 2px rgb(0, 0, 0);
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
+.footer {
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .UsProfile {
+    width: 100vw;
+    text-align: center;
+  }
+}

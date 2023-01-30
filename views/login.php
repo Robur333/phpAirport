@@ -41,7 +41,6 @@ $connect = new mysqli(
 
     }
     while($row = $resultLogin->fetch_assoc()) {
-      echo 123;
       if($row['password'] != $passwordQuery) {
         $_SESSION['password'] = $loginQuery;
         $_SESSION["errorMessage"] = "Invalid login or password";
@@ -49,7 +48,6 @@ $connect = new mysqli(
  }
 }
     while($row = $resultPassword->fetch_assoc()) {
-      echo 123;
       if($row['password'] == $passwordQuery) {
         while($row = $resulName->fetch_assoc()) {
           $_SESSION['name'] = $row['name'];
